@@ -1,0 +1,16 @@
+controller:
+  ingressClass: nginx
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1024Mi
+    requests:
+      cpu: 250m
+      memory: 512Mi
+  replicaCount: 1
+  service:
+    loadBalancerSourceRanges: []
+    # loadBalancerIP: xx.xx.xx.xx
+  prometheus:
+    create: true
+    port: 9113
